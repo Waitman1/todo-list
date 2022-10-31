@@ -1,4 +1,4 @@
-#View project
+# View project
 
 [View](https://waitman1.github.io/todo-list/)
 
