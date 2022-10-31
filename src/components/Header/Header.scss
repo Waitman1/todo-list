@@ -1,0 +1,14 @@
+.header {
+	display: block;
+
+	&__title {
+		position: absolute;
+		top: -120px;
+		left: 25%;
+		font-family: 'Heebo', sans-serif;
+		font-size: 100px;
+		font-weight: 100;
+		color: rgba(129, 99, 99, 45%);
+		text-rendering: optimizeLegibility;
+	}
+}

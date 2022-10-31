@@ -1,0 +1,130 @@
+.main {
+	position: relative;
+	z-index: 2;
+	border-top: 1px solid #e6e6e6;
+}
+
+.todo-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.todo-list li {
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #ededed;
+}
+
+li {
+	text-align: -webkit-match-parent;
+}
+
+li:hover .closed {
+	display: block;
+}
+
+li .closed {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	margin: auto 0;
+	font-size: 30px;
+	color: #d78484;
+	margin-bottom: 14px;
+	transition: color 0.3s ease-out;
+}
+
+li .closed:hover {
+	color: #ca0000;
+}
+
+.toggle {
+	text-align: center;
+	width: 26px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: 10px 0px 9px 8px;
+	border: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+label {
+	position: relative;
+}
+
+label::before {
+	content: "";
+	background: url(../../assets/svg/check.svg);
+	background-position: center;
+	background-size: contain;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	left: -36px;
+	top: 16px;
+
+	transform: scale(0) rotateZ(180deg);
+}
+
+input[type="checkbox"]:checked+label::before {
+	transform: scale(1) rotateZ(0deg);
+}
+
+label::after {
+	content: "";
+	border: 1px solid #27ae60;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: -34px;
+	top: 18px;
+	border-radius: 50%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	.todo-list li .toggle {
+		height: 40px;
+	}
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.closed:after {
+	content: '×';
+}
+
+.completed {
+	color: #d9d9d9;
+	text-decoration: line-through;
+}
+
+.todo-list li label {
+	word-break: break-all;
+	padding: 15px 60px 15px 15px;
+	margin-left: 45px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
+}
